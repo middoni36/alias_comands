@@ -8,7 +8,7 @@ create_alias(){
 
 cd
 
-myline_numb=$(awk '/#elmehdi alias/{print NR ;exit}' .bashrc) #.bashrc
+myline_numb=$(awk '/elmehdi /{print NR ;exit}' test.txt) #.bashrc
 myline_numb=$((myline_numb + 1))
 sed -i "${myline_numb}i alias ${aliasname}='bash ${exec_pwd}'" .bashrc
 
